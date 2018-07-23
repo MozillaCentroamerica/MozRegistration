@@ -1,0 +1,25 @@
+[package]
+name = "moz_registration"
+version = "0.1.0"
+authors = ["lexo <lexo@mbp>"]
+
+[dependencies]
+rocket = "0.3.6"
+rocket_codegen = "0.3.6"
+rocket_cors = "0.2.3"
+serde = "1.0"
+serde_json = "1.0"
+serde_derive = "1.0"
+diesel = { version = "1.0.0", features = ["mysql"] }
+diesel_codegen = { version = "*", features = ["mysql"] }
+r2d2 = "*"
+r2d2-diesel = "*"
+
+[dependencies.rocket_contrib]
+version = "*"
+default-features = false
+features = ["json"]
+
+[global]
+address = "0.0.0.0"
+port = 8001
